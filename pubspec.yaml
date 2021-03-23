@@ -24,6 +24,8 @@ dependencies:
   flutter:
     sdk: flutter
   font_awesome_flutter: ^8.11.0
+  google_fonts: ^2.0.0
+  smooth_star_rating: ^1.1.1
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
@@ -48,10 +50,25 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/icon.png
+    - assets/cheese.png
+    - assets/doughnut.png
+    - assets/fries.png
+    - assets/hotdog.png
+    - assets/pizza.png
+    - assets/pizza.png
+    - assets/popcorn.png
+    - assets/sandwich.png
+    - assets/taco.png
+    - assets/bento.png
+    - assets/cookie.png
+    - assets/cream.png
+    - assets/falafel.png
+    - assets/pancakes.png
+    - assets/salad.png
+    - assets/waffle.png
+    - assets/tuxedo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
