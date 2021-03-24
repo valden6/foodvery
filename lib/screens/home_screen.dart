@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:foodvery/screens/detailed_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
@@ -100,12 +101,12 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
-                    _buildListItem('Smached Burger', 'assets/icon.png', '15',Color(0xFFFFE9C6), Color(0xFFDA9551)),
-                    _buildListItem('Fries', 'assets/fries.png', '5,55',Color(0xFFC2E3FE), Color(0xFF6A8CAA)),
-                    _buildListItem('Donut', 'assets/doughnut.png', '3,5',Color(0xFFD7FADA), Color(0xFF56CC7E)),
-                    _buildListItem('Classic sandwich', 'assets/sandwich.png', '7,5',Color(0xFFFFE9C6), Color(0xFFDA9551)),
-                    _buildListItem('Spicy hot dog', 'assets/hotdog.png', '7',Color(0xFFC2E3FE), Color(0xFF6A8CAA)),
-                    _buildListItem('Taco', 'assets/taco.png', '7,5',Color(0xFFFFE9C6), Color(0xFFDA9551)),
+                    _buildListItem('Smached Burger', 'assets/icon.png', 15,Color(0xFFFFE9C6), Color(0xFFDA9551)),
+                    _buildListItem('Fries', 'assets/fries.png', 5.5,Color(0xFFC2E3FE), Color(0xFF6A8CAA)),
+                    _buildListItem('Donut', 'assets/doughnut.png', 3.5,Color(0xFFD7FADA), Color(0xFF56CC7E)),
+                    _buildListItem('Classic sandwich', 'assets/sandwich.png', 7.5,Color(0xFFFFE9C6), Color(0xFFDA9551)),
+                    _buildListItem('Spicy hot dog', 'assets/hotdog.png', 7,Color(0xFFC2E3FE), Color(0xFF6A8CAA)),
+                    _buildListItem('Taco', 'assets/taco.png', 7.5,Color(0xFFFFE9C6), Color(0xFFDA9551)),
 
                   ]
                 )
@@ -139,10 +140,10 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                         shrinkWrap: true,
                         physics: NeverScrollableScrollPhysics(),
                         children: <Widget>[
-                          _buildListItemTabBar('Taco', 4.0, '6,5','7,5', 'assets/taco.png'),
-                          _buildListItemTabBar('Cheese pizza', 5.0, '11','13', 'assets/pizza.png'),
-                          _buildListItemTabBar('Cookie', 3.0, '3','5,99', 'assets/cookie.png'),
-                          _buildListItemTabBar('Ice cream', 4.0, '2,5','2,99', 'assets/cream.png')
+                          _buildListItemTabBar('Taco', 4.0, '6,5','7,5', 'assets/taco.png',Color(0xFFFFE9C6)),
+                          _buildListItemTabBar('Cheese pizza', 5.0, '11','13', 'assets/pizza.png',Color(0xFFFFE9C6)),
+                          _buildListItemTabBar('Cookie', 3.0, '3','5,99', 'assets/cookie.png',Color(0xFFD7FADA)),
+                          _buildListItemTabBar('Ice cream', 4.0, '2,5','2,99', 'assets/cream.png',Color(0xFFD7FADA))
                         ]
                       )
                     ),
@@ -151,9 +152,9 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                         shrinkWrap: true,
                         physics: NeverScrollableScrollPhysics(),
                         children: <Widget>[
-                          _buildListItemTabBar('Spicy hot dog', 3.0, '6','7', 'assets/hotdog.png'),
-                          _buildListItemTabBar('Fries', 4.0, '4,99','5,55', 'assets/fries.png'),
-                          _buildListItemTabBar('Donut', 4.0, '2,99','3,5', 'assets/doughnut.png')
+                          _buildListItemTabBar('Spicy hot dog', 3.0, '6','7', 'assets/hotdog.png',Color(0xFFC2E3FE)),
+                          _buildListItemTabBar('Fries', 4.0, '4,99','5,55', 'assets/fries.png',Color(0xFFC2E3FE)),
+                          _buildListItemTabBar('Donut', 4.0, '2,99','3,5', 'assets/doughnut.png',Color(0xFFD7FADA))
                         ]
                       )
                     ),
@@ -162,11 +163,11 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                         shrinkWrap: true,
                         physics: NeverScrollableScrollPhysics(),
                         children: <Widget>[
-                          _buildListItemTabBar('Classic sandwich', 5.0, '6,99','7,5', 'assets/sandwich.png'),
-                          _buildListItemTabBar('Cheese pizza', 5.0, '11','13', 'assets/pizza.png'),
-                          _buildListItemTabBar('Bento', 5.0, '18','22', 'assets/bento.png'),
-                          _buildListItemTabBar('Green salad', 5.0, '10,5','12,99', 'assets/salad.png'),
-                          _buildListItemTabBar('Pancakes', 5.0, '8,5','9,99', 'assets/pancakes.png')
+                          _buildListItemTabBar('Classic sandwich', 5.0, '6,99','7,5', 'assets/sandwich.png',Color(0xFFFFE9C6)),
+                          _buildListItemTabBar('Cheese pizza', 5.0, '11','13', 'assets/pizza.png',Color(0xFFFFE9C6)),
+                          _buildListItemTabBar('Bento', 5.0, '18','22', 'assets/bento.png',Color(0xFFFFE9C6)),
+                          _buildListItemTabBar('Green salad', 5.0, '10,5','12,99', 'assets/salad.png',Color(0xFFFFE9C6)),
+                          _buildListItemTabBar('Pancakes', 5.0, '8,5','9,99', 'assets/pancakes.png',Color(0xFFD7FADA))
                         ]
                       )
                     ),
@@ -175,10 +176,10 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                         shrinkWrap: true,
                         physics: NeverScrollableScrollPhysics(),
                         children: <Widget>[
-                          _buildListItemTabBar('French cheese', 4.0, '4,50','6,5', 'assets/cheese.png'),
-                          _buildListItemTabBar('Popcorn', 4.0, '4,99','6,5', 'assets/popcorn.png'),
-                          _buildListItemTabBar('Falafel', 3.0, '6,99','8,5', 'assets/falafel.png'),
-                          _buildListItemTabBar('Waffle', 4.0, '4,99','6,5', 'assets/waffle.png')
+                          _buildListItemTabBar('French cheese', 4.0, '4,50','6,5', 'assets/cheese.png',Color(0xFFD7FADA)),
+                          _buildListItemTabBar('Popcorn', 4.0, '4,99','6,5', 'assets/popcorn.png',Color(0xFFD7FADA)),
+                          _buildListItemTabBar('Falafel', 3.0, '6,99','8,5', 'assets/falafel.png',Color(0xFFFFE9C6)),
+                          _buildListItemTabBar('Waffle', 4.0, '4,99','6,5', 'assets/waffle.png',Color(0xFFD7FADA))
                         ]
                       )
                     )
@@ -192,7 +193,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     );
   }
 
-  _buildListItemTabBar(String foodName, double rating, String promoPrice, String price, String imgPath) {
+  _buildListItemTabBar(String foodName, double rating, String promoPrice, String price, String imgPath, Color bgColor) {
     return Padding(
       padding: EdgeInsets.all(15.0),
       child: Row(
@@ -206,7 +207,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
                   width: 75.0,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(7.0),
-                    color: Color(0xFFFFE3DF)
+                    color: bgColor
                   ),
                   child: Center(child:Image.asset(imgPath, height: 50.0, width: 50.0))
                 ),
@@ -251,15 +252,12 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
     );
   }
 
-  _buildListItem(String foodName, String imgPath, String price, Color bgColor,Color textColor) {
+  _buildListItem(String foodName, String imgPath, double price, Color bgColor,Color textColor) {
     return Padding(
       padding: EdgeInsets.only(left: 15.0),
       child: InkWell(
         onTap: () {
-          //ToDo
-          // Navigator.of(context).push(MaterialPageRoute(
-          //   builder: (context) => BurgerPage(heroTag: foodName, foodName: foodName, pricePerItem: price, imgPath: imgPath)
-          // ));
+          Navigator.of(context).push(MaterialPageRoute(builder: (context) => DetailedScreen(heroTag: foodName, foodName: foodName, pricePerItem: price, imgPath: imgPath)));
         },
         child: Container(
           height: 175.0,
@@ -284,7 +282,7 @@ class _HomeScreenState extends State<HomeScreen> with SingleTickerProviderStateM
               ),
               SizedBox(height: 25.0),
               Text(foodName,style: TextStyle(fontSize: 17.0, color: textColor)),
-              Text('\$' + price,style: TextStyle(fontSize: 17.0, color: textColor))
+              Text('\$' + price.toString(),style: TextStyle(fontSize: 17.0, color: textColor))
             ]
           )
         )
