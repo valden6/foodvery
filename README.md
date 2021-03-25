@@ -2,6 +2,9 @@
 An application like uber eats or deliveroo made with flutter.
 
 ## Version
+### [1.2.1] 
+Minor bug fixes
+
 ### [1.2.0] 
 Adding detailed screen
 

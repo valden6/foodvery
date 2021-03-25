@@ -4,15 +4,15 @@ import 'package:foodvery/screens/home_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
-  runApp(InstagramApp());
+  runApp(FoodveryApp());
 }
 
-class InstagramApp extends StatefulWidget {
+class FoodveryApp extends StatefulWidget {
   @override
-  _InstagramAppState createState() => _InstagramAppState();
+  _FoodveryAppState createState() => _FoodveryAppState();
 }
 
-class _InstagramAppState extends State<InstagramApp> {
+class _FoodveryAppState extends State<FoodveryApp> {
 
   @override
   void initState(){
